@@ -1,0 +1,13 @@
+---
+- name: systemd enable
+  systemd:
+    name: "nginx"
+    enabled: yes
+    state: started
+    daemon_reload: yes  
+
+- name: reload nginx
+  systemd:
+    name: "nginx"
+    state: reloaded
+    enabled: yes
