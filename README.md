@@ -1,12 +1,12 @@
 # Pull ansible-playbook docker image
 Will pull the docker image from dockerhub
 
-    $ docker pull ansible-playbook:latest
+    $ docker pull isgdocker/ansible-playbook:latest
 
 # If you prefer to roll your own, build ansible-playbook docker image
 Roll your own if you prefer
 
-    $ docker build -t ansible-playbook:latest .
+    $ docker build -t isgdocker/ansible-playbook:latest .
 
 # Spin up nginx hello world servers
 To spin it up, apply Terraform configuration:

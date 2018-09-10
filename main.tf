@@ -60,7 +60,7 @@ resource "aws_instance" "nginx" {
       docker run --rm \
         -v $(pwd):/ansible/playbooks \
         -v ~/.ssh:/root/.ssh \
-        ansible-playbook:latest -vv -i '${self.public_ip},' \
+        isgdocker/ansible-playbook:latest -vv -i '${self.public_ip},' \
         --private-key ${var.ansible_docker_ssh_key_private} -T 300 provision.yml;
 HD
   }
@@ -72,7 +72,7 @@ HD
       docker run --rm \
         -v $(pwd):/ansible/playbooks \
         -v ~/.ssh:/root/.ssh \
-        ansible-playbook:latest -vv -i '${self.public_ip},' \
+        isgdocker/ansible-playbook:latest -vv -i '${self.public_ip},' \
         --private-key ${var.ansible_docker_ssh_key_private} -T 300 site.yml
 HD
   }
