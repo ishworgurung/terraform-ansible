@@ -11,6 +11,7 @@ Roll your own if you prefer
 # Spin up nginx hello world servers
 To spin it up, apply Terraform configuration:
 
+    $ AWS_PROFILE=my-aws-profile-name terraform init
     $ AWS_PROFILE=my-aws-profile-name terraform apply -auto-approve
 
 ## AWS creds
